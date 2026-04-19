@@ -82,6 +82,21 @@ npm run start      # Lancer le build de production
 npx prisma studio  # Interface visuelle pour explorer la base de données
 ```
 
+### Voir les données soumises (Prisma Studio)
+
+Les données des formulaires sont sauvegardées dans une base SQLite locale. Pour les consulter :
+
+1. Laisser `npm run dev` tourner dans un terminal
+2. Ouvrir un **nouveau terminal** dans le même dossier
+3. Lancer :
+
+```bash
+npx prisma studio
+```
+
+4. Ouvrir [http://localhost:5555](http://localhost:5555) dans le navigateur
+5. Cliquer sur la table **Contact** pour voir toutes les soumissions
+
 ### Variables d'environnement
 
 Créer un fichier `.env` à la racine :
