@@ -11,12 +11,12 @@
 
 ## À propos de moi
 
-- **Nom / Prénom** : [Votre Nom] [Votre Prénom]
-- **Niveau d'étude / formation en cours** : [Ex : Licence 3 Informatique / BUT Informatique / Master 1 Dev Web]
-- **Durée de stage souhaitée** : [Ex : 6 mois — Avril à Septembre 2025]
+- **Nom / Prénom** :CHETLOUL Nada Cherine
+- **Niveau d'étude**:  Licence 2 Informatique
+- **Durée de stage souhaitée** :  2 mois — a partir de 01 mai
 - **Profils** :
-  - GitHub : [https://github.com/votre-profil](https://github.com/votre-profil)
-  - LinkedIn : [https://linkedin.com/in/votre-profil](https://linkedin.com/in/votre-profil)
+  - GitHub : [https://github.com/nada-chetloul](https://github.com/nada-chetloul)
+  - LinkedIn : [www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6](www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6)
 
 ---
 
@@ -26,7 +26,6 @@
 
 ![Formulaire de contact](./screenshots/form.png)
 
-*(Remplacer par vos propres captures après lancement)*
 
 ---
 
@@ -177,7 +176,7 @@ J'ai approfondi ma maîtrise de **Next.js App Router** (notamment les Route Hand
 
 **Quelle est la place du développement web dans votre cursus de formation ?**
 
-Le développement web occupe une place centrale dans ma formation. [Compléter avec votre situation — ex : "J'ai suivi X modules de développement front et back, avec des projets en React, Node.js et bases de données relationnelles."]
+Le développement web occupe une place centrale dans ma formation. [Compléter avec votre situation — ex : "J'ai suivi 4 modules de développement front et back, avec des projets en React, Node.js et bases de données relationnelles."]
 
 **Avez-vous utilisé un LLM ? Si oui, comment intégrez-vous les LLMs à chaque étape de votre workflow ?**
 
