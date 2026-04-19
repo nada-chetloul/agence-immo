@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  civilite     String   // "Mme" | "M"
+  nom          String
+  prenom       String
+  email        String
+  telephone    String?
+  typeMessage  String   // "visite" | "rappel" | "photos"
+  message      String
+  disponibilites String  // JSON string of [{jour, heure, minute}]
+}
