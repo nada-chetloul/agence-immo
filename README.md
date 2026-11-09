@@ -9,16 +9,6 @@
 
 ---
 
-## About Me
-
-- **Name**: CHETLOUL Nada Cherine
-- **Level of study**: 2nd-year Bachelor's in Computer Science
-- **Desired internship duration**: 2 months — starting May 1st
-- **Profiles**:
-  - GitHub: [https://github.com/nada-chetloul](https://github.com/nada-chetloul)
-  - LinkedIn: [www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6](www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6)
-
----
 
 ## Screenshots
 
