@@ -1,104 +1,104 @@
-# Agence Immo — Formulaire de Contact
+# Agence Immo — Contact Form
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![Prisma](https://img.shields.io/badge/Prisma-5-2D3748?logo=prisma)
 ![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite)
 
-> Intégration d'une maquette de formulaire de contact pour une agence immobilière, avec sauvegarde des données en base de données.
+> Integration of a contact form mockup for a real estate agency, with data saved to a database.
 
 ---
 
-## À propos de moi
+## About Me
 
-- **Nom / Prénom** :CHETLOUL Nada Cherine
-- **Niveau d'étude**:  Licence 2 Informatique
-- **Durée de stage souhaitée** :  2 mois — a partir de 01 mai
-- **Profils** :
-  - GitHub : [https://github.com/nada-chetloul](https://github.com/nada-chetloul)
-  - LinkedIn : [www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6](www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6)
+- **Name**: CHETLOUL Nada Cherine
+- **Level of study**: 2nd-year Bachelor's in Computer Science
+- **Desired internship duration**: 2 months — starting May 1st
+- **Profiles**:
+  - GitHub: [https://github.com/nada-chetloul](https://github.com/nada-chetloul)
+  - LinkedIn: [www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6](www.linkedin.com/in/nada-cherine-chetloul-32a2b02a6)
 
 ---
 
 ## Screenshots
 
-> Page principale du formulaire :
+> Main form page:
 
-![Formulaire de contact](./screenshots/form.png)
+![Contact form](./screenshots/form.png)
 
 
 ---
 
-## Stack technique & choix
+## Tech Stack & Choices
 
-| Outil | Version | Raison du choix |
+| Tool | Version | Reason for choice |
 |---|---|---|
-| **Next.js** | 14 (App Router) | Framework React full-stack qui permet de co-localiser API routes et UI dans un seul projet, idéal pour ce type de formulaire avec persistance. |
-| **TypeScript** | 5 | Typage statique qui prévient les erreurs à la compilation, indispensable pour la robustesse des données du formulaire et des appels API. |
-| **Prisma** | 5 | ORM moderne avec auto-complétion, migrations et un schéma déclaratif très lisible — réduit le risque d'erreurs SQL et simplifie les évolutions du schéma. |
-| **SQLite** | 3 | Base de données embarquée, zéro configuration, idéale pour un projet de démonstration. Facilement remplaçable par PostgreSQL en production. |
-| **CSS Modules** | — | Scoping CSS natif à Next.js, évite les conflits de classes sans dépendance supplémentaire. |
-| **Google Fonts** (Barlow + Cormorant) | — | Barlow pour la lisibilité des formulaires, Cormorant pour un ton luxueux cohérent avec l'immobilier haut de gamme. |
+| **Next.js** | 14 (App Router) | Full-stack React framework that lets you co-locate API routes and UI in a single project, ideal for this kind of form with persistence. |
+| **TypeScript** | 5 | Static typing that prevents compile-time errors, essential for the robustness of form data and API calls. |
+| **Prisma** | 5 | Modern ORM with auto-completion, migrations, and a very readable declarative schema — reduces the risk of SQL errors and simplifies schema changes. |
+| **SQLite** | 3 | Embedded database, zero configuration, ideal for a demo project. Easily replaced by PostgreSQL in production. |
+| **CSS Modules** | — | CSS scoping native to Next.js, avoids class conflicts without any extra dependency. |
+| **Google Fonts** (Barlow + Cormorant) | — | Barlow for form readability, Cormorant for a luxurious tone consistent with high-end real estate. |
 
 ---
 
-## Lancement du projet
+## Running the Project
 
-### Prérequis
+### Prerequisites
 
 - Node.js >= 18
-- npm ou yarn
+- npm or yarn
 
 ### Installation
 
 ```bash
-# 1. Cloner le dépôt
+# 1. Clone the repository
 git clone https://github.com/votre-profil/agence-immo.git
 cd agence-immo
 
-# 2. Installer les dépendances
+# 2. Install dependencies
 npm install
 
-# 3. Configurer les variables d'environnement
+# 3. Configure environment variables
 cp .env.example .env
-# DATABASE_URL="file:./dev.db" est déjà configuré pour SQLite
+# DATABASE_URL="file:./dev.db" is already configured for SQLite
 
-# 4. Créer la base de données et appliquer le schéma
+# 4. Create the database and apply the schema
 npx prisma db push
 
-# 5. Lancer le serveur de développement
+# 5. Start the development server
 npm run dev
 ```
 
-Ouvrir [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000)
 
-### Commandes utiles
+### Useful Commands
 
 ```bash
-npm run dev        # Serveur de développement
-npm run build      # Build de production
-npm run start      # Lancer le build de production
-npx prisma studio  # Interface visuelle pour explorer la base de données
+npm run dev        # Development server
+npm run build      # Production build
+npm run start      # Run the production build
+npx prisma studio  # Visual interface to explore the database
 ```
 
-### Voir les données soumises (Prisma Studio)
+### Viewing Submitted Data (Prisma Studio)
 
-Les données des formulaires sont sauvegardées dans une base SQLite locale. Pour les consulter :
+Form data is saved in a local SQLite database. To view it:
 
-1. Laisser `npm run dev` tourner dans un terminal
-2. Ouvrir un **nouveau terminal** dans le même dossier
-3. Lancer :
+1. Keep `npm run dev` running in a terminal
+2. Open a **new terminal** in the same folder
+3. Run:
 
 ```bash
 npx prisma studio
 ```
 
-4. Ouvrir [http://localhost:5555](http://localhost:5555) dans le navigateur
-5. Cliquer sur la table **Contact** pour voir toutes les soumissions
+4. Open [http://localhost:5555](http://localhost:5555) in your browser
+5. Click on the **Contact** table to see all submissions
 
-### Variables d'environnement
+### Environment Variables
 
-Créer un fichier `.env` à la racine :
+Create a `.env` file at the root:
 
 ```env
 DATABASE_URL="file:./dev.db"
@@ -106,7 +106,7 @@ DATABASE_URL="file:./dev.db"
 
 ---
 
-## Structure du projet
+## Project Structure
 
 ```
 agence-immo/
@@ -114,17 +114,17 @@ agence-immo/
 │   ├── app/
 │   │   ├── api/
 │   │   │   └── contact/
-│   │   │       └── route.ts      # API POST + GET contacts
+│   │   │       └── route.ts      # POST + GET contacts API
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 │   ├── components/
-│   │   ├── ContactForm.tsx       # Composant principal du formulaire
+│   │   ├── ContactForm.tsx       # Main form component
 │   │   └── ContactForm.module.css
 │   └── lib/
-│       └── prisma.ts             # Singleton Prisma Client
+│       └── prisma.ts             # Prisma Client singleton
 ├── prisma/
-│   └── schema.prisma             # Schéma de la BDD
+│   └── schema.prisma             # Database schema
 ├── .env
 └── package.json
 ```
@@ -135,9 +135,9 @@ agence-immo/
 
 ### `POST /api/contact`
 
-Enregistre une soumission de formulaire.
+Saves a form submission.
 
-**Body JSON :**
+**JSON body:**
 ```json
 {
   "civilite": "Mme",
@@ -153,38 +153,38 @@ Enregistre une soumission de formulaire.
 }
 ```
 
-**Réponse 201 :**
+**201 response:**
 ```json
 { "success": true, "id": 1 }
 ```
 
 ### `GET /api/contact`
 
-Retourne tous les contacts enregistrés (ordre décroissant).
+Returns all saved contacts (descending order).
 
 ---
 
 ## Questions
 
-**Avez-vous trouvé l'exercice facile ou difficile ? Qu'est-ce qui vous a posé problème ?**
+**Did you find the exercise easy or difficult? What gave you trouble?**
 
-L'exercice était de difficulté intermédiaire. La partie la plus délicate a été de reproduire fidèlement la maquette tout en la rendant fonctionnelle : la gestion des disponibilités (ajout/suppression de créneaux sous forme de tags) et l'alignement précis des deux colonnes avec le fond en image. L'intégration de Prisma avec Next.js App Router (Server vs Client Components) a aussi demandé de bien clarifier les frontières.
+The exercise was of intermediate difficulty. The trickiest part was faithfully reproducing the mockup while making it functional: handling availabilities (adding/removing time slots as tags) and precisely aligning the two columns with the background image. Integrating Prisma with the Next.js App Router (Server vs Client Components) also required clearly understanding the boundaries.
 
-**Avez-vous appris de nouveaux outils pour répondre à l'exercice ? Si oui, lesquels ?**
+**Did you learn any new tools to complete the exercise? If so, which ones?**
 
-J'ai approfondi ma maîtrise de **Next.js App Router** (notamment les Route Handlers pour l'API) et de **Prisma** avec SQLite. L'utilisation des **CSS Modules** avec des variables CSS pour reproduire une maquette avec précision m'a aussi permis d'affiner ma méthode d'intégration.
+I deepened my knowledge of the **Next.js App Router** (notably Route Handlers for the API) and **Prisma** with SQLite. Using **CSS Modules** with CSS variables to reproduce a mockup accurately also helped me refine my integration method.
 
-**Quelle est la place du développement web dans votre cursus de formation ?**
+**What place does web development have in your curriculum?**
 
-Le développement web occupe une place centrale dans ma formation. [Compléter avec votre situation — ex : "J'ai suivi 4 modules de développement front et back, avec des projets en React, Node.js et bases de données relationnelles."]
+Web development has a central place in my studies. [Fill in with your situation — e.g.: "I have taken 4 front-end and back-end development modules, with projects in React, Node.js, and relational databases."]
 
-**Avez-vous utilisé un LLM ? Si oui, comment intégrez-vous les LLMs à chaque étape de votre workflow ?**
+**Did you use an LLM? If so, how do you integrate LLMs at each step of your workflow?**
 
-Oui, j'ai utilisé Claude (Anthropic) comme assistant. Mon workflow : 
-1. **Analyse** — je lis l'exercice seul et identifie les points techniques clés
-2. **Architecture** — je décide de la structure du projet (App Router, Prisma, CSS Modules) de manière autonome
-3. **Génération** — j'utilise le LLM pour accélérer l'écriture du code boilerplate (schéma Prisma, types TypeScript) et pour débloquer des problèmes précis
-4. **Review** — je relis et comprends tout le code généré avant de le valider, je l'adapte si besoin
-5. **Documentation** — j'utilise le LLM pour structurer le README en m'assurant que toutes les sections requises sont couvertes
+Yes, I used Claude (Anthropic) as an assistant. My workflow:
+1. **Analysis** — I read the exercise on my own and identify the key technical points
+2. **Architecture** — I decide the project structure (App Router, Prisma, CSS Modules) autonomously
+3. **Generation** — I use the LLM to speed up writing boilerplate code (Prisma schema, TypeScript types) and to get unblocked on specific problems
+4. **Review** — I read and understand all generated code before validating it, and adapt it if needed
+5. **Documentation** — I use the LLM to structure the README, making sure all required sections are covered
 
-L'objectif est de garder la maîtrise technique tout en gagnant en vitesse d'exécution.
+The goal is to keep technical control while gaining execution speed.
